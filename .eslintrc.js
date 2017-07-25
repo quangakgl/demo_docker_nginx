@@ -33,7 +33,20 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {
       'optionalDependencies': ['test/unit/index.js']
     }],
+    'linebreak-style': 0,//["error", (require("os").EOL === "\r\n" ? "windows" : "unix")],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
 }
+
+// module.exports = {
+//   "root": true,
+//   "parserOptions": {
+//     "sourceType": "module",
+//     "ecmaVersion": 6
+//   },
+//   "rules": {
+//     // windows linebreaks when not in production environment
+//     "linebreak-style": ["error", (require("os").EOL === "\r\n" ? "windows" : "unix")]
+//   }
+// };
